@@ -1,0 +1,32 @@
+{% if include.items %}
+  <aside class="usa-width-one-fourth">
+    <ul class="usa-sidenav-list">
+    {% for item in include.items %}
+      <li>
+
+        {% if item.href %}
+          {% assign item_link = item.href %}
+        {% else %}
+          {% assign item_link = item.title | snakecase | hash_link %}
+        {% endif %}
+
+        <a href="{{ item_link }}">{{ item.title }}</a>
+        {% if item.sub %}
+          <ul class="usa-sidenav-sub_list">
+          {% for sub_item in item.sub %}
+            <li>
+              {% if sub_item.href %}
+                {% assign sub_item_link = sub_item.href %}
+              {% else %}
+                {% assign sub_item_link = sub_item.title | snakecase | hash_link %}
+              {% endif %}
+              <a href="{{ sub_item_link }}">{{ sub_item.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </aside>
+{% endif %}

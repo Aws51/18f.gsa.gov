@@ -6,6 +6,30 @@ image: /assets/img/page-feature/join.jpg
 lead: Now’s the time to get involved in transforming how the federal government does technology. Join the digital services movement.
 redirect_from:
   - /apply/
+subnav:
+  - title: Join 18F
+    href: /join-18f/
+  - title: So you want to join 18F?
+    href: /so-you-want-to-join-18f/
+  - title: Who we are hiring
+    href: /hiring/
+  - title: Open positions
+    href: /open-positions/
+  - title: How to apply
+    href: /how-to-apply/
+  - title: Interview process
+    href: /interview-process/
+    sub:
+      - title: Subnav term
+      - title: Item number two
+      - title: Item number three
+    title: Benefits
+    href: /benefits/
+  - title: Government pay grades explained
+    href: /government-pay-grades-explained/
+  - title: Leave policies
+    href: /leave-policies/
+content_wide: true
 ---
 
 We’re looking for candidates passionate about our mission, with top-notch software development, design, content, and operations skills to match.
