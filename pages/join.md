@@ -8,7 +8,7 @@ redirect_from:
   - /apply/
 subnav:
   - title: Join 18F
-    href: /join-18f/
+    href: /join/
   - title: So you want to join 18F?
     href: /so-you-want-to-join-18f/
   - title: Who we are hiring

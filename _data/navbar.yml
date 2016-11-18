@@ -4,29 +4,121 @@ assigned:
         href: pages/home.md
         permalink: /
         show_in_menu: false
+        show_in_drawer: true
         show_in_footer: false
     -
-        text: About
-        href: pages/about.md
-        permalink: /about/
-        show_in_menu: false
+        text: What we deliver
+        href: pages/what-we-deliver.md
+        permalink: /what-we-deliver/
+        show_in_menu: true
+        show_in_drawer: true
         show_in_footer: false
         children:
     -
-        text: Work
-        href: pages/projects.md
-        permalink: /projects/
+        text: How we work
+        href: pages/how-we-work.md
+        permalink: /how-we-work/
         show_in_menu: true
+        show_in_drawer: true
+        show_in_footer: false
+        children:
+    -
+        text: Hire 18F
+        href: pages/hire.md
+        permalink: /hire/
+        show_in_menu: true
+        show_in_drawer: true
+        show_in_footer: false
+        children:
+    -
+        text: Join 18F
+        href: pages/join.md
+        permalink: /join/
+        show_in_menu: true
+        show_in_drawer: true
         show_in_footer: false
         children:
             -
-                text: 'Dashboard'
-                href: /dashboard/
+                text: 'So you want to join 18F?'
+                permalink: /join/so-you-want-to-join-18f/
                 show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'Who we are hiring'
+                permalink: /join/hiring/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'Who we are hiring'
+                permalink: /join/hiring/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'How to apply'
+                permalink: /join/how-to-apply/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'Interview process'
+                permalink: /join/interview-process/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+                children:
+                    -
+                        text: 'Child 1'
+                        permalink: /join/interview-process/child-1/
+                        show_in_menu: false
+                        show_in_drawer: false
+                        show_in_footer: false
+                    -
+                        text: 'Child 2'
+                        permalink: /join/interview-process/child-2/
+                        show_in_menu: false
+                        show_in_drawer: false
+                        show_in_footer: false
+                    -
+                        text: 'Child 2'
+                        permalink: /join/interview-process/child-2/
+                        show_in_menu: false
+                        show_in_drawer: false
+                        show_in_footer: false
+            -
+                text: Benefits
+                permalink: /join/benefits/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'Government pay grades explained'
+                permalink: /join/government-pay-grades-explained/
+                show_in_menu: false
+                show_in_drawer: true
+                show_in_footer: false
+            -
+                text: 'Leave policies'
+                permalink: /join/leave-policies/
+                show_in_menu: false
+                show_in_drawer: true
                 show_in_footer: false
     -
-        text: 'Project data'
-        href: _data/projects.yml
-        show_in_menu: false
+        text: Blog
+        href: blog/index.html
+        permalink: /blog/
+        show_in_menu: true
+        show_in_drawer: true
         show_in_footer: false
+        children:
+    -
+        text: Projects
+        href: _data/projects.yml
+        permalink: /project/
+        show_in_menu: false
+        show_in_drawer: false
+        show_in_footer: false
+        children:
 unassigned: []

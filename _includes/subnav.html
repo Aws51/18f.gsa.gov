@@ -10,7 +10,7 @@
           {% assign item_link = item.title | snakecase | hash_link %}
         {% endif %}
 
-        <a href="{{ item_link }}">{{ item.title }}</a>
+        <a href="{{ item_link }}" {% if page.permalink == item_link %}class="usa-current"{% endif %}>{{ item.title }}</a>
         {% if item.sub %}
           <ul class="usa-sidenav-sub_list">
           {% for sub_item in item.sub %}

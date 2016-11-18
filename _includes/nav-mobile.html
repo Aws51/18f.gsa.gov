@@ -2,7 +2,11 @@
   <button class="sliding-panel-close">
     <img src="{{ site.baseurl }}/assets/img/global/close.svg" alt="close">
   </button>
-  <ul class="usa-sidenav-list">
-    {% include navigation.html %}
-  </ul>
+
+  {%
+    include
+    navigation.html
+    children=true
+    drawer=true
+  %}
 </nav>

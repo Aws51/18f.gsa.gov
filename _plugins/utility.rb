@@ -1,13 +1,16 @@
+require 'pry'
+require 'rb-readline'
+
 module Jekyll
   module Utility
-    def strip_dashes(str)
+    def clip_char(str, char='-')
       str = str.to_s
-      str = if str[0] == '-'
+      str = if str[0] == char
               str[1...str.length]
             else
               str
             end
-      if str[-1] == '-'
+      if str[-1] == char
         str[0...-1]
       else
         str
@@ -21,7 +24,13 @@ module Jekyll
     def snakecase(text)
       text = text.to_s
       text = text.downcase.gsub(/[^a-z\0-9\s]/, '').gsub(/\W+/, '-')
-      strip_dashes(text)
+      clip_char(text)
+    end
+
+    def matches_url(page_url, url)
+      page_url = clip_char(page_url.to_s.downcase, '/')
+      url = clip_char(url.to_s.downcase, '/')
+      matches = page_url == url || nil
     end
   end
 end

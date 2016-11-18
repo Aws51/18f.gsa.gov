@@ -28,14 +28,46 @@
     margin-top: 6rem;
 
     ul {
-      @include unstyled-list;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
     li {
       border-top-color: $color-gray-lighter;
     }
 
-    a {
+    button {
+      background-color: transparent;
+      background-position: right 0 center;
+      border-radius: 0;
+      text-align: left;
+
+      &[aria-expanded=true],
+      &[aria-expanded=false] {
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+        background-size: 1rem;
+      }
+
+      &[aria-expanded=true] {
+        background-image: url(../img/global/minus-alt.png);
+        background-image: url(../img/global/minus-alt.svg);
+      }
+
+      &[aria-expanded=false] {
+        background-image: url(../img/global/plus-alt.png);
+        background-image: url(../img/global/plus-alt.svg);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color-gray-lightest;
+      }
+    }
+
+    a,
+    li > button {
       @include padding(1rem null 1rem 3rem);
       color: $color-gray;
       font-weight: $font-bold;
@@ -49,6 +81,19 @@
         border-left: $border-accent;
         color: $color-dark;
         padding-left: 2rem;
+      }
+    }
+  }
+
+  .usa-sidenav-sub_list {
+    a {
+      padding-left: 3.8rem;
+
+      &.usa-current {
+        border-left: 0;
+        color: $color-primary;
+        font-weight: $font-bold;
+        padding-left: 3.8rem;
       }
     }
   }
