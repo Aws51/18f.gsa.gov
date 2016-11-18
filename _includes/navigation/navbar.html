@@ -1,0 +1,16 @@
+<ul class="usa-accordion">
+{% for item in include.nav_items %}
+  {% if item.in_menu %}
+  <li>
+    {% if item.permalink %}
+      {% assign item_link = item.permalink %}
+    {% else %}
+      {% assign item_link = item.text | snakecase | hash_link %}
+    {% endif %}
+    {% assign is_matching = page.url | matches_url: item.permalink %}
+
+    <a href="{{ item_link }}" {% if is_matching %}class="usa-current"{% endif %}>{{ item.text }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>

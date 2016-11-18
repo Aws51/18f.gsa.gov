@@ -30,7 +30,35 @@ module Jekyll
     def matches_url(page_url, url)
       page_url = clip_char(page_url.to_s.downcase, '/')
       url = clip_char(url.to_s.downcase, '/')
-      matches = page_url == url || nil
+      page_url == url || nil
+      # binding.pry
+    end
+
+    def find_page(page_url, nav_items)
+      match = {}
+      # binding.pry
+      nav_items.each do |item|
+        # binding.pry
+        if item['permalink'] == '/join/'
+          # binding.pry
+        end
+        if matches_url(page_url, item['permalink'])
+          # binding.pry
+          match = item
+        end
+      end
+      # if page_url == '/join/'
+      #   binding.pry
+      # end
+      match
+    end
+
+    def check_type(value)
+      type = value.class
+      puts '---------------------'
+      puts "#{value} is a #{type}"
+      puts '---------------------'
+      binding.pry
     end
   end
 end

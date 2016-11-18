@@ -3,15 +3,14 @@ layout: default
 ---
 
 {% include feature-image.html %}
-<!-- {{ page.content_wide }} -->
 <section class="usa-grid content-focus{% if page.content_wide %} content-wide{% endif %}">
   <h1 class="usa-sr-only">{{ page.title }}</h1>
   {% if page.lead %}
     <h3>{{ page.lead }}</h3>
   {% endif %}
-  <!-- <section class="usa-grid-one-fourth"> -->
-	  {% include subnav.html items=page.subnav %}
-  <!-- </section> -->
+  <aside class="usa-width-one-third">
+	  {% include navigation.html subnav=true %}
+  </aside>
   <section class="usa-width-two-thirds">
   	{{ content }}
   </section>
